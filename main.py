@@ -7,12 +7,8 @@ df['date'] = pd.to_datetime(df['date'], format="%Y-%m-%d")
 
 #  cria uma nova coluna que armazena apenas o mês
 df['mes'] = df['date'].dt.month
-
+print(df['date'].min(), df['date'].max())
 # salva o documento
-df.to_excel("data/coffee.xlsx")
-print("O documento foi salvo com sucesso!")
+#df.to_excel("data/coffee.xlsx")
 
-
-
-#print(df.info()) - usar para saber as informações das colunas
-#print(df.isnull().sum()) - usar para saber se existe valor nulo 
+#print("O documento foi salvo com sucesso!")
