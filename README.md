@@ -1,4 +1,4 @@
-# 📊 Relatório de Receita
+# 📊 Relatório de Receita de uma cafeteria
 
 Projeto Python que automatiza a análise de dados de vendas e gera gráficos a partir de uma planilha `.xlsx`.
 
@@ -12,14 +12,18 @@ Projeto Python que automatiza a análise de dados de vendas e gera gráficos a p
 ## 📁 Estrutura do projeto
 
 ```
-sales-report/
+coffee-sales-report/
 │
 ├── data/
-│   └── vendas.xlsx
+│   └── coffee.xlsx
 ├── output/
-│   └── (gráficos gerados aqui)
-├── main.py
-└── gerar_graficos.py
+│   ├── pizza_cshtp.png
+│   ├── bar_prod.png
+│   └── linha_mes.png
+├── data_control.py     (lê o csv original, mostra informações da tabela e mostra se tem algum valor nulo)
+├── main.py          (lê o csv original, salva como xlsx)
+├── gerar_graficos.py (lê o xlsx, gera os 3 gráficos)
+└── README.md
 ```
 
 ## ▶️ Como rodar
@@ -31,12 +35,17 @@ sales-report/
 pip install pandas matplotlib openpyxl
 ```
 
-3. Gere a planilha de dados:
+3. Instale o arquivo csv na pasta `data/`
+
+4. Gere a planilha de dados:
 ```bash
 python main.py
 ```
-
-4. Gere os gráficos:
+5. (Opcional) Verifique a qualidade dos dados:
+```bash
+python data_control.py
+```
+6. Gere os gráficos:
 ```bash
 python gerar_graficos.py
 ```
